@@ -1,0 +1,473 @@
+<interface>
+  <object class="GtkWindow" id="window">
+    <property name="visible">True</property>
+    <property name="title">Voip Client</property>
+    <property name="border-width">10</property>
+    <property name="width-request">360</property>
+    <property name="height-request">700</property>
+    <child>
+      <object class="GtkGrid" id="main_box">
+        <property name="visible">True</property>
+        <property name = "column-homogeneous">True</property>
+        <property name = "row-homogeneous">True</property>
+
+        <!-- local endpoint -->
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+              <child>
+                <object class="GtkBox">
+                  <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                  <property name="visible">True</property>
+                  <child>
+                    <object class="GtkLabel">
+                      <property name="visible">True</property>
+                      <property name="label">Local EndPoint:</property>
+                      <attributes>
+                        <attribute name="weight" value="bold"/>
+                      </attributes>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkGrid">
+                  <property name="visible">True</property>
+
+                  <child>
+                    <object class="GtkLabel">
+                      <property name="visible">True</property>
+                      <property name="label">IP Address:</property>
+                      <attributes>
+                        <attribute name="foreground" value="#888888"/>
+                      </attributes>
+                    </object>
+                    <packing>
+                      <property name="left-attach">0</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkGrid">
+                      <property name="visible">True</property>
+                      <property name="column-homogeneous">True</property>
+                      <property name="row-homogeneous">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">1</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkEntry" id="local_ip">
+                      <property name="visible">True</property>
+                      <property name="placeholder-text"></property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">2</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkGrid">
+                  <property name="visible">True</property>
+
+                  <child>
+                    <object class="GtkLabel">
+                      <property name="visible">True</property>
+                      <property name="label">IP Port:</property>
+                      <attributes>
+                        <attribute name="foreground" value="#888888"/>
+                      </attributes>
+                    </object>
+                    <packing>
+                      <property name="left-attach">0</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkGrid">
+                      <property name="visible">True</property>
+                      <property name="column-homogeneous">True</property>
+                      <property name="row-homogeneous">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">1</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkEntry" id="local_port">
+                      <property name="visible">True</property>
+                      <property name="placeholder-text">10000</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">2</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                </object>
+              </child>
+
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+        <!-- end of local endpoint -->
+
+        <!-- remote endpoint -->
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+              <child>
+                <object class="GtkBox">
+                  <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                  <property name="visible">True</property>
+                  <child>
+                    <object class="GtkLabel">
+                      <property name="visible">True</property>
+                      <property name="label">Remote EndPoint:</property>
+                      <attributes>
+                        <attribute name="weight" value="bold"/>
+                      </attributes>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkGrid">
+                  <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                  <property name="visible">True</property>
+                  <child>
+                    <object class="GtkLabel">
+                      <property name="visible">True</property>
+                      <property name="label">IP Address:</property>
+                      <attributes>
+                        <attribute name="foreground" value="#888888"/>
+                      </attributes>
+                    </object>
+                    <packing>
+                      <property name="left-attach">0</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkGrid">
+                      <property name="visible">True</property>
+                      <property name="column-homogeneous">True</property>
+                      <property name="row-homogeneous">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">1</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkEntry" id="remote_ip">
+                      <property name="visible">True</property>
+                      <property name="placeholder-text"></property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">2</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkGrid">
+                  <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                  <property name="visible">True</property>
+                  <child>
+                    <object class="GtkLabel">
+                      <property name="visible">True</property>
+                      <property name="label">IP Port:</property>
+                      <attributes>
+                        <attribute name="foreground" value="#888888"/>
+                      </attributes>
+                    </object>
+                    <packing>
+                      <property name="left-attach">0</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkGrid">
+                      <property name="visible">True</property>
+                      <property name="column-homogeneous">True</property>
+                      <property name="row-homogeneous">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">1</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkEntry" id="remote_port">
+                      <property name="visible">True</property>
+                      <property name="placeholder-text">10000</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">2</property>
+                      <property name="top-attach">0</property>
+                    </packing>
+                  </child>
+
+                </object>
+              </child>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
+          </packing>
+        </child>
+        <!-- end of remote endpoint -->
+
+        <!-- encoder -->
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="label">Select Encoder:</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                    </attributes>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkComboBoxText" id="encoder_list">
+                <property name="visible">True</property>
+                <property name="has-entry">False</property>
+                <items>
+                  <item id="encoder_1">no_encoder</item>
+                </items>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">2</property>
+          </packing>
+        </child>
+        <!-- end of encoder -->
+
+        <!-- decoder -->
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="label">Configure Decoder:</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                    </attributes>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkButton" id="select_decoder">
+                    <property name="visible">True</property>
+                    <property name="label">Select</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkLabel" id="decoders_text">
+                    <property name="visible">True</property>
+                    <property name="label">No decoder selected</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">3</property>
+          </packing>
+        </child>
+        <!-- end of decoder -->
+
+        <!-- send and play box -->
+        <child>
+          <object class="GtkBox" id="send_and_playout_area">
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+            <property name="visible">False</property>
+
+            <child>
+              <object class="GtkGrid">
+                <property name="visible">True</property>
+                <property name="column-homogeneous">False</property>
+                <property name="row-homogeneous">False</property>
+
+                
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="label">Start Sending:</property>
+                    <attributes>
+                      <attribute name="foreground" value="#888888"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+
+                <child>
+                  <object class="GtkGrid">
+                    <property name="visible">True</property>
+                    <property name="column-homogeneous">True</property>
+                    <property name="row-homogeneous">True</property>
+                    <property name="hexpand">True</property>
+                  </object>
+                  <packing>
+                    <property name="left-attach">1</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+
+                <child>
+                  <object class="GtkSwitch" id="send_switch">
+                    <property name="visible">True</property>
+                    <property name="active">False</property>
+                  </object>
+                  <packing>
+                    <property name="left-attach">2</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkGrid">
+                <property name="visible">True</property>
+                <property name="column-homogeneous">False</property>
+                <property name="row-homogeneous">False</property>
+
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="label">Start Playout:</property>
+                    <attributes>
+                      <attribute name="foreground" value="#888888"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+
+                <child>
+                  <object class="GtkGrid">
+                    <property name="visible">True</property>
+                    <property name="column-homogeneous">True</property>
+                    <property name="row-homogeneous">True</property>
+                    <property name="hexpand">True</property>
+                  </object>
+                  <packing>
+                    <property name="left-attach">1</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+
+                <child>
+                  <object class="GtkSwitch" id="playout_switch">
+                    <property name="visible">True</property>
+                    <property name="active">False</property>
+                  </object>
+                  <packing>
+                    <property name="left-attach">2</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+
+          </object>
+
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">4</property>
+          </packing>
+        </child>
+        <!-- end of send and play box -->
+
+        <!-- enable session box -->
+        <child>
+
+          <object class="GtkBox">
+            <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+            <property name="visible">True</property>
+
+            <child>
+              <object class="GtkButton" id="session_button">
+                <property name="visible">True</property>
+                <property name="label">Start Session</property>
+              </object>
+            </child>
+
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">5</property>
+          </packing>
+
+        </child>
+        <!-- end of enable session box -->
+
+      </object>
+    </child>
+  </object>
+</interface>
+
